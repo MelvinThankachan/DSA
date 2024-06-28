@@ -51,10 +51,11 @@ def binary_search_recursive(array, target):
     elif target < array[middle]:
         binary_search_recursive(array=array[left:middle], target=target)
 
+
 def binary_search_iter(array, target):
     left = 0
     right = len(array) - 1
-    while right < left:
+    while right >= left:
         middle = (left + right) // 2
         if target > array[middle]:
             left = middle + 1
@@ -63,6 +64,24 @@ def binary_search_iter(array, target):
         if target == array[middle]:
             return middle
     raise ValueError(f"{target} not in the list")
+
+
+def binary_search_rec(array, target):
+    left = 0
+    right = len(array)
+    return binary_search_recur(array, target, left, right)
+
+
+def binary_search_recur(array, target, left, right):
+    if right < left:
+        raise ValueError(f"{target} not in the list")
+    middle = (left + right) // 2
+    if target == array[middle]:
+        return middle
+    if target > array[middle]:
+        return binary_search_recur(array=array, target=target, left=middle + 1, right=right)
+    return binary_search_recur(array=array, target=target, left=left, right=middle - 1)
+
 
 integer_array = [
     23,
@@ -168,11 +187,11 @@ integer_array = [
 ]
 integer_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 integer_array.sort()
-target = 10
+target = 4
 print(integer_array)
 
 # print(linear_search(integer_array, target))
 # print(binary_search_iteration(integer_array, target))
 # print(binary_search_iteration(integer_array, target))
-print(binary_search_iter(integer_array, target))
+print(binary_search_rec(integer_array, target))
 print(integer_array.index(target))
