@@ -1,6 +1,6 @@
 # Linked List
 
-# preppend()
+# prepend()
 # append()
 # remove_first()
 # remove_last()

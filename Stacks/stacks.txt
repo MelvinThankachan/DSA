@@ -15,3 +15,6 @@ Operations:
 3. peek()       - O(1)
 4. is_empty()   - O(1)
 
+We can use in undo or operations perform in reverse order
+Can implement using arrays and deque
+All operations are O(1)
