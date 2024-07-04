@@ -2,12 +2,13 @@ Stacks
 
 Applications
 1. Implement the undo feature
-2. Build compilers (eg: systax checking)
+2. Build compilers (eg: syntax checking)
 3. Evaluate expressions(eg: 1 + 2 * 3)
 4. Build navigation (eg: forward/backward)
 
 Stack of books
 Last In First Out(LIFO)
+Insertion and deletion happens in the same end.
 
 Operations:
 1. push(item)   - O(1)
