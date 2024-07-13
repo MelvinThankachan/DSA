@@ -1,0 +1,10 @@
+Selection sort
+
+Scan from left to right
+Find the smallest item and swap it with the right index then go for the next
+In each iteration it select the smallest unsorted element from the array and move it to the right place
+
+Best case - O(n^2)
+Worst case - O(n^2)
+
+its not an efficient sorting algorithm

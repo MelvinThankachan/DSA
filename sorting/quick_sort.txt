@@ -1,0 +1,11 @@
+Quick sort
+
+Quick sort is an efficient sorting algorithm
+It select a pivot value and then it partition the array in to two using that pivot.
+The left side of the array will be elements less than pivot and right side of the pivot will be greater than the pivot
+
+Best case - O(n log n)
+Worst case - O(n^2)
+Space complexity - O(n)
+
+Quick sort use less space than merge sort

@@ -1,0 +1,12 @@
+Insertion sort
+
+we go from left to right
+First we assume the first item is on the right place
+We move to the second item. If second item is less than the first one we insert the second item before first item
+we move to 3rd item. if 3rd item less than its previous item we insert that item before the items greater than the current item and after the items less than the current item
+Its like when we receive card from the dealer, we insert that in the right place even though the dealer is not dealt all the cards.
+
+Best case - O(n)
+Worst case - O(n^2)
+
+Insertion sort is very inefficient

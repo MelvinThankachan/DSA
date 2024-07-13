@@ -17,3 +17,6 @@ Operations:
 4. is_empty - O(1)
 4. is_full - O(1)
 
+PriorityQueue
+elements have an PriorityQueue
+Which element have high priority it will come out first

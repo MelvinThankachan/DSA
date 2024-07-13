@@ -1,0 +1,13 @@
+Merge sort
+
+In Merge sort we divide the list to sub-list then sort them
+in the end we merge all the sorted sub-lists in order to sort the entire list 
+divide and conquer
+
+Need additional space to store the sub arrays
+
+Best case - O(log n)
+Worst case - O(n log n)
+Space complexity - O(n)
+
+Merge sort is an efficient algorithm

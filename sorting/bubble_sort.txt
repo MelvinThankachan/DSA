@@ -1,0 +1,11 @@
+Bubble sort
+
+Scan from left to right
+Compare the near elements, if its out of order we swap them
+Need multiple iterations to fully sort the array
+In every pass the largest item bubbles up and get sorted correctly
+
+Best case - O(n)
+Worst case - O(n^2)
+
+Bubble sort is very inefficient
