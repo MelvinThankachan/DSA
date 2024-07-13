@@ -1,20 +1,45 @@
-# Ignore all files and directories by default
-*
-
-# But track .py and .txt files
-!*.py
-!*.txt
-
-# Ignore .pyc files and __pycache__ folders
-*.pyc
+# Byte-compiled / optimized Python files
 __pycache__/
+*.py[cod]
 
-# Also ignore __pycache__ in all subdirectories
-**/__pycache__/
+# C extensions
+*.so
 
-# Ignore specific files in the root folder
-/test.py
-/test.txt
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Also make sure to not ignore directories
-!*/
+# IDEs and editors
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.idea/
+*.swp
+*~
+
+# Miscellaneous
+*.log
+*.pot
+*.bak
+*.sql
+*.sqlite3
+*.pyc
+
+# PyInstaller
+build/
+
+# Custom
+test.py
+test.txt
