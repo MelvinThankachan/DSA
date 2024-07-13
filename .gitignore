@@ -1,12 +1,20 @@
-# Ignore specific files
-test.py     # Ignore test.py file
-test.txt    # Ignore test.txt file
+# Ignore all files and directories by default
+*
 
-# Ignore all .pyc files
-**/*.pyc       # Ignore all Python bytecode files
+# But track .py and .txt files
+!*.py
+!*.txt
 
-# Allow .txt files
-!*.txt      # Allow text files
+# Ignore .pyc files and __pycache__ folders
+*.pyc
+__pycache__/
 
-# Allow .py files
-!*.py       # Allow Python source files
+# Also ignore __pycache__ in all subdirectories
+**/__pycache__/
+
+# Ignore specific files in the root folder
+/test.py
+/test.txt
+
+# Also make sure to not ignore directories
+!*/
