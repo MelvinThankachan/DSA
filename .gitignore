@@ -1,0 +1,12 @@
+# Ignore specific files
+test.py     # Ignore test.py file
+test.txt    # Ignore test.txt file
+
+# Ignore all .pyc files
+*.pyc       # Ignore all Python bytecode files
+
+# Allow .txt files
+!*.txt      # Allow text files
+
+# Allow .py files
+!*.py       # Allow Python source files
