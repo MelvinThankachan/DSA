@@ -40,6 +40,6 @@ var/
 # PyInstaller
 build/
 
-# Custom
-test.py
-test.txt
+# Ignore specific files
+/test.py
+/test.txt
