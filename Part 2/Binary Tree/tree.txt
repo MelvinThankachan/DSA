@@ -13,11 +13,13 @@ Depth   - Depth is nothing but a messure of how far is the target node from the 
         - The depth of a node is the number of edges from the root node to the that node.
         - The depth of the root is 0.
         - The depth of a child node will be one more than it's parent node.
+        - As we go down in the tree the depth increases.
 Height  - Height is opposite to depth.
         - Height of a tree is the length of the logest path from the root to a leaf node.
         - it's the number of edges on the longest downward path from the root to a leaf
         - Height of any leaf node in a tree is 0.
         - Height of any node in a tree is the the length of longest path from the node to the distant leaf node.
+        - As we go up in the tree the height increases.
 
 Different types of Tree
 - Binary Tree
@@ -65,5 +67,3 @@ Tree Traversal
         - Pre-order (Root, Left subtree, Right subtree)
         - In-order (Left subtree, Root, Right subtree) - We get the elements in ascending order.
         - Post-order (Left subtree, Right subtree, Root) - In this the root node will be visited at last.
-
-

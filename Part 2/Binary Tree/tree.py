@@ -176,10 +176,10 @@ class Tree:
         low = float("-inf")
         high = float("inf")
         return _validate(root, low, high)
-    
-    
+
     def print_values_at_distance(self, k):
         values = []
+
         def _values_at_distance(root, k):
             if root is None:
                 return
@@ -188,7 +188,7 @@ class Tree:
                 return
             _values_at_distance(root.left_child, k - 1)
             _values_at_distance(root.right_child, k - 1)
-        
+
         root = self.root
         _values_at_distance(root, k)
         return values
