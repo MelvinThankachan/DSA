@@ -4,22 +4,25 @@ Trees
 - It consist of Nodes and Edges. 
 - Nodes are the objects where the data is stored and the edges are the connections between the nodes.
 - Top node of a tree called root node. Root node have no parent node.
-- Child nodes have only one parent node(Except root node)
-- The nodes which have no child nodes called as Leef Nodes.
+- Child nodes have only one parent node(Except root node).
+- The nodes which have a same parent known as Siblings.
+- The nodes which have no child nodes called as Leaf Nodes.
 
 
 Properties
-Depth   - Depth is nothing but a messure of how far is the target node from the root node. 
+Depth   - Depth is nothing but a measure of how far is the target node from the root node. 
         - The depth of a node is the number of edges from the root node to the that node.
         - The depth of the root is 0.
         - The depth of a child node will be one more than it's parent node.
         - As we go down in the tree the depth increases.
 Height  - Height is opposite to depth.
-        - Height of a tree is the length of the logest path from the root to a leaf node.
+        - Height of a tree is the length of the longest path from the root to a leaf node.
         - it's the number of edges on the longest downward path from the root to a leaf
         - Height of any leaf node in a tree is 0.
         - Height of any node in a tree is the the length of longest path from the node to the distant leaf node.
         - As we go up in the tree the height increases.
+Degree  - Degree of a node is the number of child of that node.
+        - The degree of a tree is defined as the maximum degree among its nodes.
 
 Different types of Tree
 - Binary Tree
@@ -28,7 +31,7 @@ Different types of Tree
 
 Applications
 - To represent hierarchical data
-- Databases (To store the index of data for the efficint lookup)
+- Databases (To store the index of data for the efficient lookup)
 - File systems
 - Autocompletion (Store the possible outcomes in a hierarchical manner to autocomplete)
 - Compilers (To parse expressions)
@@ -39,12 +42,33 @@ Trees have a lot of applications in real world
 Binary Tree
 
 - In binary trees one parent have no more than 2 child nodes.
+- In binary tree one parent have at most 2 child.
 - It is a recursive tree, that means all the subtrees are also a binary tree.
+
+Different Types of Binary Tree:
+Full Binary Tree            - Every node other than the leaf node have exactly 2 child.
+                            - Each node have 0 or 2 child. No node have only 1 child.
+Complete Binary Tree        - All the levels except the last level completely filled with nodes
+                            - The last level can be completely filled, otherwise it filled from left to right.
+                            - Used in heap data structure.
+Perfect Binary Tree         - Like the name say it's a Perfect Binary Tree.
+                            - All the internal nodes have 2 child and all the leaf nodes will be at the same level.
+                            - All the leaf nodes will be in the last level and the last level will be completely filled with leaf nodes. 
+Balanced Binary Tree        - A Tree is considered as a balanced tree when the absolute difference between the hight of the left subtree and the height of the right subtree is no more than 1.
+Pathological Binary Tree    - It is also called Degenerate binary tree.
+                            - In pathological binary tree every node except leaf nodes have only one child. Either left child or right child.
+                            - Its more like a linked list structure than the a tree structure
+Skewed Binary Tree          - These are highly unbalanced trees.
+                            - If depth of one subtree is way more than another one it's called Skewed binary tree.
+                            - In Left Skewed tree the left subtree will be more deeper than the right one (Left heavy tree).
+                            - In Right Skewed tree the right subtree will be more deeper than the left one (Right heavy tree).
+
 
 Binary Search Tree(BST)
 
-- BST is a special type of Binary Tree for efficient searching.
 - In Binary Search Tree for every node the left node value will be less than the parent node value and the right node value will be greater than the parent node value.
+- BST is a special type of Binary Tree for efficient searching.
+- It is a recursive tree because all the subtrees in a BST is also BST.
 
 
 Operations in BST
@@ -53,7 +77,7 @@ Operations in BST
 - Insert O(log n)
 - Delete O(log n)
 
-Trees offer a better performance than the arrays and linked lists.
+This Trees offer a better performance than the arrays and linked lists.
 
 
 
@@ -67,3 +91,14 @@ Tree Traversal
         - Pre-order (Root, Left subtree, Right subtree)
         - In-order (Left subtree, Root, Right subtree) - We get the elements in ascending order.
         - Post-order (Left subtree, Right subtree, Root) - In this the root node will be visited at last.
+
+
+Deletion of a node from the BST
+- We have to manage three cases
+        - When the node which have the target value have no child:
+                In this situation we just simply delete the node and set the parent nodes corresponding child to None.
+        - When the node have one child:
+                In this we simply set the corresponding child of the parent node to the child of the target node.
+        - When the node have two child:
+                In this we can take two a approaches. In one we can find the maximum value in the left subtree and replace with the target node then delete the node which had the maximum value. Or we can find the minimum value in the right subtree and replace with the target node then delete the node which had the minimum value.
+- If the root node have the target value, then we have to manage that differently. If the root node have 2 child then no problem the above deletion approach work properly. Otherwise we have to explicitly manage the cases, because it involved changing the root node.
