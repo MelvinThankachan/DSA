@@ -1,0 +1,9 @@
+AVL Tree
+
+- AVL Tree is a special binary search tree which have self-balancing properties.
+- When we insert or delete an element in tree we check the tree is balanced or not. if it is not balanced we balance it using rotation algorithms.
+- There is mainly 4 rotation algorithms to balance the tree.
+    - Left Rotation (LL) - If the imbalance on the left child's left subtree of the node, we perform LL rotation.
+    - Right Rotation (RR) - If the imbalance on the right child's right subtree of the node, we perform RR rotation.
+    - Left Right Rotation (LR) - If the imbalance on the left child's right subtree of the node, we perform LR rotation.
+    - Right Left Rotation (RL) - If the imbalance on the right child's left subtree of the node, we perform LR rotation.

@@ -112,6 +112,7 @@ class BinarySearchTree:
                 self.root = root.left_child
                 del root
                 return
+
         deletion(root, value)
     
     def count(self):
@@ -121,18 +122,49 @@ class BinarySearchTree:
             left_count = counting(root.left_child)
             right_count = counting(root.right_child)
             return 1 + left_count + right_count
+
         return counting(self.root)
+    
+    def is_leaf_node(self, node):
+        return node.left_child is None and node.right_child is None
+
+    def minimum(self):
+        def mini(root):
+            if root.left_child is None:
+                return root.value
+            return mini(root.left_child)
+        
+        root = self.root
+        if root is None:
+            raise ValueError("Tree is empty")
+        return mini(root)
+    
+    def maximum(self):
+        def maxi(root):
+            if root.right_child is None:
+                return root.value
+            return maxi(root.right_child)
+        
+        root = self.root
+        if root is None:
+            raise ValueError("Tree is empty")
+        return maxi(root)
+            
+
+
 
 
 tree = BinarySearchTree()
-values = []
+values = [4, 2, 6, 1, 3, 5, 7]
 for value in values:
     tree.insert(value)
 print(tree.find(6))
 # for value in values[:-1]:
 #     tree.delete(value)
-tree.delete(10)
+# tree.delete(4)
 print(tree.pre_order())
 print(tree.in_order())
 print(tree.post_order())
 print(tree.count())
+print(tree.minimum())
+print(tree.maximum())
