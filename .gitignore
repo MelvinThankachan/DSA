@@ -41,5 +41,4 @@ var/
 build/
 
 # Ignore specific files
-test.py
-test.txt
+test.*
