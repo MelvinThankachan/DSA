@@ -1,0 +1,26 @@
+Heap
+
+- Heap is a complete binary tree which have heap property
+- Value or every parent node should be greater than or equal to its child(in max-heap).
+- Two types of heaps:
+    - Max-heap - Every parent node have the the value greater than or equal to its child nodes. The node have the maximum value in the heap
+    - Min-heap - Every parent node have the the value lesser than or equal to its child nodes. The node have the minimum value in the heap
+
+Binary Heap
+
+Binary heap is a complete binary tree with heap property. Binary heap is a recursive data structure. Every sub-heaps are also binary heaps itself.
+Even though the binary heap have a tree structure we can implement that using an array because its a complete binary tree. It's more memory efficient.
+left child index = (parent index * 2) + 1
+right child index = (parent index * 2) + 2
+parent index = (index - 1) // 2
+
+Insertion - Insert at the left side of last level. if its violate the heap property(In max heap, if the inserted node greater than the parent node) we bubble up the inserted value untill its satisfy the heap property. Its a O(log n) process.
+Deletion - Replace the target value with the right most value in the last level. Then bubble down untill its satisfy the heap property. It's also a O(log n) process.
+Finding the max element from a max-heap and finding the small element from a min-heap is O(1) process.
+
+
+Applications:
+    - Sorting (HeapSort)
+    - Graph Algorithms (Shortest path)
+    - Implementation of Priority Queue
+    - Finding the Kth smallest/largest value

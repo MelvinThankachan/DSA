@@ -1,3 +1,18 @@
+In BST the average time complexity is O(log n). 
+If the BST is not structured properly(unbalanced) then the time complexity might increase to log(n). 
+So balancing tree is very important.
+There is lot of self balancing trees. 
+Self balancing trees are nothing but a BST, but it check the balance of the tree after insertion and deletion operations. If the tree is not balanced, then perform algorithms to balance the tree.
+Because of the tree always maintained balanced and get maximum performance.
+Popular self-balancing trees are:
+    - AVL Tree
+    - Red Black Tree
+    - B Tree
+    - Splay Tree
+    - 2-3 Tree
+    
+
+
 AVL Tree
 
 - AVL Tree is a special binary search tree which have self-balancing properties.

@@ -62,7 +62,7 @@ class AVLTree:
                 return self.AVLNode(value)
             if value < root.value:
                 root.left_child = insertion(root.left_child)
-            else:
+            if value > root.value:
                 root.right_child = insertion(root.right_child)
 
             root.height = self.set_height(root)
@@ -70,9 +70,34 @@ class AVLTree:
 
         self.root = insertion(self.root)
 
+    def is_balanced(self):
+        def balanced(root):
+            if root is None:
+                return True
+            if not 1 >= self.balance_factor(root) >= -1:
+                return False
+            return balanced(root.left_child) and balanced(root.right_child)
+
+        return balanced(self.root)
+
+    def is_perfect(self):
+        def post_order(root):
+            if root is None:
+                return True
+            if root.height == 1 and (root.left_child is None or root.right_child is None):
+                return False
+            return post_order(root.left_child) and post_order(root.right_child)
+
+        return post_order(self.root)
+
 
 tree = AVLTree()
 tree.insert(10)
-tree.insert(30)
 tree.insert(20)
+tree.insert(30)
+tree.insert(40)
+tree.insert(50)
+tree.insert(60)
+tree.insert(70)
+print(tree.is_perfect())
 print(tree.root)
