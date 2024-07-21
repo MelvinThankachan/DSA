@@ -1,0 +1,21 @@
+Trie
+
+Trie is a tree based data structure.
+The name trie came from retrieval. The main advantage of trie is fast retrieval of keys from a dataset of strings and sequences.
+It is also knows as prefix tree. Because two strings which have same prefix stores in a single sequence of nodes.
+
+- The root node of the trie is always empty.
+- Every parent node can have multiple children.
+- Each node only contains one character.
+- A word is stored as a sequence of nodes.
+- Words which have same prefix stored in a single sequence of nodes.
+- Each node contains value(character), children(as a hash table), and a boolean find the end of a word.
+
+Operations
+- Insertion - Insertion is O(L) complex. where L is the length of the word. (Basically O(1))
+- Deletion - Deletion done by just making the boolean field in the node to false. same complexity as insertion.
+- Searching - Have the same complexity
+
+Applications
+- Auto Complete
+- Spell Checking
