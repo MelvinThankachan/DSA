@@ -1,7 +1,7 @@
 Heap
 
-- Heap is a complete binary tree which have heap property
-- Value or every parent node should be greater than or equal to its child(in max-heap).
+- Heap is a complete binary tree which have heap property.
+- Value of every parent node should be greater than or equal to its child(in max-heap).
 - Two types of heaps:
     - Max-heap - Every parent node have the the value greater than or equal to its child nodes. The node have the maximum value in the heap
     - Min-heap - Every parent node have the the value lesser than or equal to its child nodes. The node have the minimum value in the heap

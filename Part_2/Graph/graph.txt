@@ -1,0 +1,13 @@
+Graph is also a non linear data structure. Like trees in graphs we have nodes and edges. In graph the nodes are called vertices. Unlike tree a node can have many parents and many children. The directly connected nodes are known as neighbours or adjacent nodes. There is 2 types of graphs. One is Directional and another one is Un-directional. In directional the connections have only 1 direction. In directional one edge is two way connected. 
+Graphs can be implemented using adjacency matrix or adjacency lists. Matrix is efficient when the graph is dense. but in most of the case the list Implementation is better in case of average efficiency. 
+We use graphs to represent connected objects.
+
+We have two ways to traverse through a graph
+    - Breadth First Search
+    - Depth First Search
+Unlike tree we can't traverse through all the items in the graph. We can select any node as root. and We can only traverse through the nodes which is reachable from the root node. if there is any node which have only outgoing edges, we can't reach it from other nodes.
+
+Applications of Graph:
+    - To find the shortest distance between 2 nodes
+    - Used in maps for navigation
+    - We can use wherever there is multiple connections between multiple objects.
